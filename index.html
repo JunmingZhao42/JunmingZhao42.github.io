@@ -3,59 +3,234 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#171717" media="(prefers-color-scheme: dark)" />
     <meta
       name="description"
-      content="The personal website, experience, and CV of Your Name."
+      content="Junming Zhao is a PhD candidate in Computer Science and Engineering at UNSW, working on formal methods and systems verification."
     />
-    <meta property="og:title" content="Your Name — Personal website" />
-    <meta property="og:description" content="Personal website and CV." />
+    <meta property="og:title" content="Junming Zhao — Personal website" />
+    <meta
+      property="og:description"
+      content="PhD candidate working on formal methods and systems verification."
+    />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="og.png" />
+    <meta property="og:url" content="https://junmingzhao42.github.io/" />
+    <meta
+      property="og:image"
+      content="https://junmingzhao42.github.io/og.png"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="Junming Zhao — PhD Candidate · UNSW Sydney — Formal Methods · Systems Verification"
+    />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Your Name — Personal website" />
-    <meta name="twitter:description" content="Personal website and CV." />
-    <meta name="twitter:image" content="og.png" />
-    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="styles.css" />
-    <title>Your Name — Personal website</title>
+    <meta name="twitter:title" content="Junming Zhao — Personal website" />
+    <meta
+      name="twitter:description"
+      content="PhD candidate working on formal methods and systems verification."
+    />
+    <meta
+      name="twitter:image"
+      content="https://junmingzhao42.github.io/og.png"
+    />
+    <meta
+      name="twitter:image:alt"
+      content="Junming Zhao — PhD Candidate · UNSW Sydney — Formal Methods · Systems Verification"
+    />
+    <link rel="canonical" href="https://junmingzhao42.github.io/" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png?v=5" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png?v=5" />
+    <link rel="icon" type="image/svg+xml" sizes="any" href="favicon.svg?v=5" />
+    <script src="theme.js"></script>
+    <link rel="stylesheet" href="styles.css?v=6" />
+    <title>Junming Zhao — Personal website</title>
   </head>
   <body>
     <header class="site-header page-width">
-      <a class="site-name" href="#top">Your Name</a>
       <nav aria-label="Primary navigation">
-        <a href="#about">About</a>
+        <a
+          class="nav-cv"
+          href="cv.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Open CV PDF in a new tab"
+        >
+          CV (PDF) <span aria-hidden="true">↗</span>
+        </a>
+        <a href="#research">Research</a>
         <a href="#experience">Experience</a>
-        <a href="cv.pdf" target="_blank" rel="noreferrer">CV</a>
       </nav>
+      <div class="theme-control" hidden>
+        <button
+          class="theme-button"
+          id="theme-button"
+          type="button"
+          aria-expanded="false"
+          aria-controls="theme-options"
+        >
+          <svg
+            class="theme-icon"
+            viewBox="0 0 24 24"
+            width="20"
+            height="20"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <circle cx="12" cy="12" r="7.5" fill="none" stroke="currentColor" stroke-width="1.5" />
+            <path d="M12 4.5a7.5 7.5 0 0 0 0 15V4.5Z" fill="currentColor" />
+            <path d="M12 4.5v15" fill="none" stroke="currentColor" stroke-width="1.5" />
+          </svg>
+          <span class="visually-hidden" id="theme-label">Theme: System</span>
+        </button>
+        <div class="theme-options" id="theme-options" hidden>
+          <fieldset>
+            <legend>Appearance</legend>
+            <label><input type="radio" name="theme" value="system" checked /> System</label>
+            <label><input type="radio" name="theme" value="light" /> Light</label>
+            <label><input type="radio" name="theme" value="dark" /> Dark</label>
+          </fieldset>
+        </div>
+      </div>
     </header>
 
     <main id="top" class="page-width">
       <section class="intro" aria-labelledby="page-title">
-        <p class="label">Personal website</p>
-        <h1 id="page-title">Your Name</h1>
-        <p class="role">Role or discipline based in Your City.</p>
-        <p class="summary">
-          A clear, two-sentence introduction to who you are, what you do, and
-          the kind of work you care about.
-        </p>
-        <div class="actions">
-          <a class="primary-link" href="cv.pdf" target="_blank" rel="noreferrer">
-            View CV
-          </a>
-          <a class="text-link" href="mailto:hello@example.com">
-            hello@example.com
-          </a>
+        <div class="intro-copy">
+          <h1 id="page-title">Junming Zhao</h1>
+          <p class="summary">
+            I'm a PhD candidate in the
+            <a
+              class="text-link"
+              href="https://trustworthy.systems/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >Trustworthy Systems team</a>
+            at UNSW Sydney,
+            supervised by
+            <a
+              class="text-link"
+              href="https://trustworthy.systems/people/?cn=Rob+Sison"
+              target="_blank"
+              rel="noopener noreferrer"
+            >Dr. Rob Sison</a>,
+            <a
+              class="text-link"
+              href="https://trustworthy.systems/people/?cn=Thomas+Sewell"
+              target="_blank"
+              rel="noopener noreferrer"
+            >Dr. Thomas Sewell</a>, and
+            <a
+              class="text-link"
+              href="https://trustworthy.systems/people/?cn=Miki+Tanaka"
+              target="_blank"
+              rel="noopener noreferrer"
+            >Dr. Miki Tanaka</a>.
+            I use Isabelle/HOL, rely-guarantee reasoning, and separation logic
+            to verify a multithreaded network subsystem built on the
+            <a
+              class="text-link"
+              href="https://sel4.systems/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >seL4 secure microkernel</a>.
+          </p>
         </div>
+
+        <img
+          class="profile-photo"
+          src="profile.jpg"
+          alt="Portrait of Junming Zhao"
+          width="297"
+          height="268"
+        />
       </section>
 
-      <section id="about" class="section" aria-labelledby="about-title">
-        <h2 id="about-title">About</h2>
-        <div class="section-content prose">
-          <p>
-            Add a short paragraph about your background and approach. Keep it
-            concrete and easy to scan. This is also a good place for one small
-            personal detail that helps people remember you.
-          </p>
+      <section id="research" class="section" aria-labelledby="research-title">
+        <h2 id="research-title">Selected Research Outputs</h2>
+        <div class="section-content item-list">
+          <article class="item">
+            <p class="item-period">2026</p>
+            <div>
+              <h3>
+                SMT-based Deductive Verification of Device Drivers using the
+                Pancake-to-Viper Transpiler
+              </h3>
+              <p class="item-organisation">
+                Samuel Tyler, Alessandro Legnani, Junming Zhao, Zhewen Shen,
+                Rihui Wu, Miki Tanaka, and Gernot Heiser
+              </p>
+              <p class="item-summary">
+                14th Workshop on Programming Languages and Operating Systems
+                (PLOS 2026). To appear.
+              </p>
+              <div class="output-links">
+                <a
+                  href="https://trustworthy.systems/publications/papers/Tyler_LZSWTH_26.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Paper
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="item">
+            <p class="item-period">2026</p>
+            <div>
+              <h3>
+                Mechanising Local Rely-Guarantee Reasoning over the seL4 Trace
+                Monad
+              </h3>
+              <p class="item-organisation">Junming Zhao</p>
+              <p class="item-summary">
+                Isabelle Workshop 2026, part of FLoC 2026.
+              </p>
+              <div class="output-links">
+                <a
+                  href="https://files.sketis.net/Isabelle_Workshop_2026/Isabelle_2026_paper14.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Paper
+                </a>
+                <a
+                  href="https://files.sketis.net/Isabelle_Workshop_2026/Isabelle_2026_slides14.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Slides
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="item">
+            <p class="item-period">2025</p>
+            <div>
+              <h3>Verifying Device Drivers with Pancake</h3>
+              <p class="item-organisation">
+                Junming Zhao, Miki Tanaka, Johannes Åman Pohjola, Alessandro
+                Legnani, Tiana Tsang Ung, H. Truong, Tsun Wang Sau, Thomas Sewell,
+                Rob Sison, Hira Syeda, Magnus Myreen, Michael Norrish, and Gernot
+                Heiser
+              </p>
+              <p class="item-summary">arXiv:2501.08249 [cs.PL].</p>
+              <div class="output-links">
+                <a
+                  href="https://arxiv.org/abs/2501.08249"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Preprint
+                </a>
+              </div>
+            </div>
+          </article>
         </div>
       </section>
 
@@ -64,37 +239,93 @@
         class="section"
         aria-labelledby="experience-title"
       >
-        <h2 id="experience-title">Experience</h2>
+        <h2 id="experience-title">Selected Experience</h2>
         <div class="section-content item-list">
           <article class="item">
-            <p class="item-period">20XX — Present</p>
+            <p class="item-period">2026</p>
             <div>
-              <h3>Current role</h3>
-              <p class="item-organisation">Organisation</p>
+              <h3>Summer Research Fellow</h3>
+              <p class="item-organisation">
+                <a
+                  class="text-link"
+                  href="https://www.renaissancephilanthropy.org/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >Renaissance Philanthropy</a>
+                AI for Math Summer Fellowship
+              </p>
               <p class="item-summary">
-                A short sentence about what you do and the value of your work.
+                Mechanising angelic nondeterminism in Isabelle/HOL and
+                researching parallelism for angelic processes.
+              </p>
+              <p class="item-supervision">
+                Supervised by
+                <a
+                  class="text-link"
+                  href="https://www-users.york.ac.uk/~pfr500/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >Dr. Pedro Ribeiro</a>.
               </p>
             </div>
           </article>
 
           <article class="item">
-            <p class="item-period">20XX — 20XX</p>
+            <p class="item-period">2023 — 2024</p>
             <div>
-              <h3>Previous role</h3>
-              <p class="item-organisation">Organisation</p>
+              <h3>Research Engineer</h3>
+              <p class="item-organisation">
+                <a
+                  class="text-link"
+                  href="https://trustworthy.systems/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >UNSW Trustworthy Systems Team</a>
+              </p>
               <p class="item-summary">
-                A short sentence about your responsibilities or a useful result.
+                Implemented
+                <a
+                  class="text-link"
+                  href="https://trustworthy.systems/projects/pancake/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >Pancake</a>
+                device drivers and benchmarked network performance.
               </p>
             </div>
           </article>
 
           <article class="item">
-            <p class="item-period">20XX — 20XX</p>
+            <p class="item-period">2022 — 2024</p>
             <div>
-              <h3>Earlier role</h3>
-              <p class="item-organisation">Organisation</p>
+              <h3>Research Assistant</h3>
+              <p class="item-organisation">
+                <a
+                  class="text-link"
+                  href="https://www.mmtk.io/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >ANU MMTk Team</a>
+              </p>
               <p class="item-summary">
-                A short sentence that gives context without repeating your CV.
+                Ported MMTk to GHC and introduced flexible garbage-collection
+                plans for functional-language runtimes.
+              </p>
+              <p class="item-supervision">
+                Supervised by
+                <a
+                  class="text-link"
+                  href="https://www.steveblackburn.org/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >Prof. Steve Blackburn</a>
+                and
+                <a
+                  class="text-link"
+                  href="https://www.smart-cactus.org/~ben/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >Ben Gamari</a>.
               </p>
             </div>
           </article>
@@ -105,10 +336,24 @@
         <h2 id="education-title">Education</h2>
         <div class="section-content item-list">
           <article class="item">
-            <p class="item-period">20XX</p>
+            <p class="item-period">2024 — Present</p>
             <div>
-              <h3>Degree or qualification</h3>
-              <p class="item-organisation">Institution</p>
+              <h3>PhD Candidate in Computer Science and Engineering</h3>
+              <p class="item-organisation">University of New South Wales (UNSW)</p>
+            </div>
+          </article>
+
+          <article class="item">
+            <p class="item-period">2018 — 2023</p>
+            <div>
+              <h3>
+                Bachelor of Advanced Computing (Honours) and Bachelor of
+                Mathematical Sciences
+              </h3>
+              <p class="item-organisation">
+                The Australian National University (ANU)
+              </p>
+              <p class="item-summary">First Class Honours · University Medal</p>
             </div>
           </article>
         </div>
@@ -117,19 +362,42 @@
       <section class="section" aria-labelledby="contact-title">
         <h2 id="contact-title">Contact</h2>
         <div class="section-content contact-links">
-          <a href="mailto:hello@example.com">Email</a>
-          <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">
+          <a href="mailto:junming.zhao@unsw.edu.au">Email</a>
+          <a
+            href="https://www.linkedin.com/in/junming-zhao-180b05271/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             LinkedIn
           </a>
-          <a href="https://github.com/" target="_blank" rel="noreferrer">
+          <a
+            href="https://github.com/JunmingZhao42"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             GitHub
+          </a>
+          <a
+            href="https://orcid.org/0009-0002-0064-2882"
+            target="_blank"
+            rel="me noopener noreferrer"
+            aria-label="ORCID profile 0009-0002-0064-2882"
+          >
+            ORCID
+          </a>
+          <a
+            href="https://www.trustworthy.systems/people/?cn=Junming+Zhao"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Trustworthy Systems
           </a>
         </div>
       </section>
     </main>
 
     <footer class="page-width">
-      <p>© 2026 Your Name</p>
+      <p>© 2026 Junming Zhao</p>
       <a href="#top">Back to top</a>
     </footer>
   </body>
