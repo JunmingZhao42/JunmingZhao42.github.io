@@ -61,7 +61,7 @@ input:focus-visible {
 }
 
 .page-width {
-  width: min(100% - 40px, 760px);
+  width: min(100% - 40px, 900px);
   margin-inline: auto;
 }
 
@@ -335,7 +335,7 @@ footer p {
 
 @media (max-width: 640px) {
   .page-width {
-    width: min(100% - 32px, 760px);
+    width: min(100% - 32px, 900px);
   }
 
   .site-header {
