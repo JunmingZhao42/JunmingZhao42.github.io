@@ -309,12 +309,27 @@ footer p {
 
 @media (max-width: 720px) {
   .intro {
-    grid-template-columns: 1fr;
-    gap: 40px;
+    grid-template-columns: minmax(0, 1fr) 88px;
+    gap: 24px;
+  }
+
+  .intro-copy {
+    display: contents;
+  }
+
+  .intro h1 {
+    margin-bottom: 0;
+  }
+
+  .summary {
+    grid-column: 1 / -1;
   }
 
   .profile-photo {
-    width: 128px;
+    grid-column: 2;
+    grid-row: 1;
+    width: 88px;
+    height: auto;
   }
 }
 
